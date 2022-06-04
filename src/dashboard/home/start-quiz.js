@@ -30,7 +30,7 @@ export default function StartQuiz({ userid, name, data }) {
             status,
             allowed: false
         }
-        // let res=await completeExam(payload)
+        let res=await completeExam(payload)
         // console.log(status ? "submitted automatically" : "user submit")
         setloader(false)
     }

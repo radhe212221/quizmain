@@ -1,6 +1,7 @@
 import { Badge, Box, Button, Flex, Heading } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 import Loader from '../../comp/loader'
+import UserResult from './user-result'
 import StartQuiz from './start-quiz'
 import { listQuiz } from '../../services'
 import { transform, uniqueBy ,countBy} from '../../utils'
@@ -24,7 +25,8 @@ export default function HomeDashboard() {
             <Flex gap={2}>
                 {uniqueBy(a, "title").map(x => <Button colorScheme="orange">take {x} <Badge ml={2} fontSize="xl" colorScheme="yellow">{countBy(a,x,"title")?.length}</Badge></Button>)}
             </Flex>
-            <StartQuiz userid="-N3hdTXoGz4xR2I5uhPu" name="quiz1" data={countBy(a,"quiz1","title")} />
+            {/* <StartQuiz userid="-N3hdTXoGz4xR2I5uhPu" name="quiz1" data={countBy(a,"quiz1","title")} /> */}
+            <UserResult userid="-N3hdTXoGz4xR2I5uhPu"  />
         </Box>
     )
 }

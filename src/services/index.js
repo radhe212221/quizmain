@@ -44,3 +44,7 @@ export const listQuiz = async () => {
     let res = _get(`${url1}.json`)
     return res
 }
+export const listExams = async () => {
+    let res = _get(`${url6}.json`)
+    return res
+}
