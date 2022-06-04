@@ -30,3 +30,7 @@ export const createQuiz = async payload => {
     let res = _post(`${url1}.json`, payload).then(d => ({ ...payload, id: d })).catch(e => null)
     return res
 }
+export const listQuiz = async () => {
+    let res = _get(`${url1}.json`)
+    return res
+}

@@ -7,7 +7,7 @@ export default function AdminDashboard() {
   return (
     <div>
       <Header />
-      <Box h="90vh">
+      <Box>
         <UploadQuiz />
       </Box>
       <Footer />
